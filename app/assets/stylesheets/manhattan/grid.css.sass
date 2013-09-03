@@ -77,27 +77,55 @@
   // Prevent columns from collapsing when empty
   min-height: 1px
 
-// Create the Extra small grid
+
+
+// Extra small grid, i.e. phones
+// --------------------------------------
 @include grid-core(xs)
+
+// Create the omega core for max-width
+@include media(max-width $screen-xs-max)
+  @include omega-core(xs)
   
-// Create the small grid
+
+
+// Small Grid for tablets and large phones
+// --------------------------------------
 @include media(min-width $screen-sm)
   .container
     max-width: $screen-sm
   @include grid-core(sm)
 
-// Create the medium grid
+// Create the omega core
+@include media(min-width $screen-sm max-width $screen-sm-max)
+  @include omega-core(sm)
+
+
+
+// Medium grid for smaller computers
+// --------------------------------------
 @include media(min-width $screen-md)
   .container
     max-width: $screen-md
   @include grid-core(md)
 
-// Create the large grid
+// Create the omega core for the screen size
+@include media(min-width $screen-md max-width $screen-lg)
+  @include omega-core(md)
+
+
+
+// Large grid for large computers
+// --------------------------------------
 @include media(min-width $screen-lg)
+  // Set .container to become an outer-container with a max-width
   .container
     @include outer-container
-  @include grid-core(lg)
 
+  // Create the grid
+  @include grid-core(lg)
+  // Create the omega core
+  @include omega-core(lg)
 
 
 

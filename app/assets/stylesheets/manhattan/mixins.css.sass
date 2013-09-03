@@ -18,3 +18,13 @@
         left: flex-grid($i, $grid-columns) + flex-gutter($grid-columns)
       .col-#{$size}-pull-#{$i}
         right: flex-grid($i, $grid-columns) + flex-gutter($grid-columns)
+
+
+
+
+@mixin omega-core($size)
+  @for $i from 1 through $grid-columns
+    .omega-#{$size}-#{$i}
+      [class^="col-"],
+      [class*=" col-"]
+        @include omega(#{$i}n)
