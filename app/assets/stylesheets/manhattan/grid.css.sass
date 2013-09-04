@@ -18,7 +18,9 @@
   float: left
   display: inline-block
 
-
+[class^="col-"],
+[class*=" col-"]
+  padding: 10px
 
 
 // Grid columns
@@ -126,7 +128,3 @@
   @include grid-core(lg)
   // Create the omega core
   @include omega-core(lg)
-
-
-
-

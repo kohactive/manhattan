@@ -12,6 +12,7 @@
         float: left
       @include span-columns($i)
 
+    
     // If it's not the screen-xs, then let's add push and pull helper classes
     @if $size != "xs"
       .col-#{$size}-push-#{$i}
@@ -20,8 +21,17 @@
         right: flex-grid($i, $grid-columns) + flex-gutter($grid-columns)
 
 
+    // Create the collapse classes, i.e., .col-lg-collapse-2
+    .col-#{$size}-collapse-#{$i}
+      @include span-columns($i, collapse)
 
 
+    // Offsetting, i.e., .col-sm-offset-2
+    .col-#{$size}-offset-#{$i}
+      @include shift($i)
+
+
+// Omega Core builder
 @mixin omega-core($size)
   @for $i from 1 through $grid-columns
     .omega-#{$size}-#{$i}
