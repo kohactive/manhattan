@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["john@kohactive.com"]
   spec.description   = "A powerful, mobile-first responsive framework built on Bourbon Neat."
   spec.summary       = "A powerful, mobile-first responsive framework built on Bourbon Neat."
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/johnkoht/manhattan"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
