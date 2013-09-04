@@ -1,6 +1,11 @@
 # Manhattan
 
-TODO: Write a gem description
+Manhattan is a powerful, mobile-first responsive framework built on top of Bourbon Neat. It's similar to Bootstrap 3 in syntax and usage but approachs the grid system differently.
+
+## Usage
+
+TODO: Write usage instructions here
+
 
 ## Installation
 
@@ -15,10 +20,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install manhattan
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
