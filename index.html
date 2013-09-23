@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta charset='utf-8'>
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'>
+  <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+  <link href='/favicon.ico' rel='apple-touch-icon' type='image/x-icon'>
+  <title>Manhattan</title>
+  <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/application.js" type="text/javascript"></script>
+</head>
+<body>
+  <header class='navbar'>
+    <div class='container'>
+      <div class='col'>
+        <ul class='nav'>
+          <li class='brand'><a href="#">Manhattan</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section class='container'>
+    <h1>Manhattan</h1>
+    <p>A powerful, mobile-first responsive framework built on Bourbon Sass.</p>
+  </section>
+  <section class='container'>
+    <h2>Grid System</h2>
+    <p>Manhattan includes a responsive, mobile-first fluid grid system similar to Bootstrap 3 but built on Bourbon Sass. It includes predefined classes for easy layout options as well as powerful mixins for generating more semantic layouts.</p>
+    <p>Unlike Bootstrap 3, Manhattan uses margin's rather than padding to accomplish column spacing. Unlike BS3, you can accomplish fluid, margin-less columns also (explained later).</p>
+    <h3>Responsive Patterns</h3>
+    <p>Manhattan is very similar to BS3 in structure. The grid system is built around a mobile-first approach and includes 4 primary column sizes:</p>
+    <ul>
+      <li>.col-xs-* (< 768px)</li>
+      <li>.col-sm-* (>= 768px)</li>
+      <li>.col-md-* (>= 992px)</li>
+      <li>.col-lg-* (>= 1200px)</li>
+    </ul>
+    <h2>Examples</h2>
+    <div class='row'>
+      <div class='col-md-1'>.col-md-1</div>
+      <div class='col-md-1'>.col-md-1</div>
+      <div class='col-md-1'>.col-md-1</div>
+      <div class='col-md-1'>.col-md-1</div>
+      <div class='col-md-1'>.col-md-1</div>
+      <div class='col-md-1'>.col-md-1</div>
+      <div class='col-md-1'>.col-md-1</div>
+      <div class='col-md-1'>.col-md-1</div>
+      <div class='col-md-1'>.col-md-1</div>
+      <div class='col-md-1'>.col-md-1</div>
+      <div class='col-md-1'>.col-md-1</div>
+      <div class='col-md-1'>.col-md-1</div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>.col-md-4</div>
+      <div class='col-md-8'>.col-md-8</div>
+    </div>
+    <div class='row'>
+      <div class='col-md-6'>.col-md-6</div>
+      <div class='col-md-6'>.col-md-6</div>
+    </div>
+    <h3>Omega Helper</h3>
+    <p>
+      Responsive omega helpers allow you to dynamically shift the omega of the grid based on screen size. Omega is the removal of the column margin, learn more on the
+      <a href="http://neat.bourbon.io/docs/#omega">Bourbon Neat docs.</a>
+      You can use the following omega helpers:
+    </p>
+    <ul>
+      <li>.omega-xs-*</li>
+      <li>.omega-sm-*</li>
+      <li>.omega-md-*</li>
+      <li>.omega-lg-*</li>
+    </ul>
+    <p>Apply the omega helper to the wrapper element:</p>
+    <pre class='code'>.row.omega-sm-2.omega-md-3.omega-lg-4</pre>
+    <div class='row omega-sm-2 omega-lg-4 omega-md-3 omega-helper'>
+      <div class='col-lg-3 col-sm-6 col-xs-12 col-md-4'>.col-lg-3.col-sm-6.col-xs-12.col-md-4</div>
+      <div class='col-lg-3 col-sm-6 col-xs-12 col-md-4'>.col-lg-3.col-sm-6.col-xs-12.col-md-4</div>
+      <div class='col-lg-3 col-sm-6 col-xs-12 col-md-4'>.col-lg-3.col-sm-6.col-xs-12.col-md-4</div>
+      <div class='col-lg-3 col-sm-6 col-xs-12 col-md-4'>.col-lg-3.col-sm-6.col-xs-12.col-md-4</div>
+      <div class='col-lg-3 col-sm-6 col-xs-12 col-md-4'>.col-lg-3.col-sm-6.col-xs-12.col-md-4</div>
+      <div class='col-lg-3 col-sm-6 col-xs-12 col-md-4'>.col-lg-3.col-sm-6.col-xs-12.col-md-4</div>
+      <div class='col-lg-3 col-sm-6 col-xs-12 col-md-4'>.col-lg-3.col-sm-6.col-xs-12.col-md-4</div>
+      <div class='col-lg-3 col-sm-6 col-xs-12 col-md-4'>.col-lg-3.col-sm-6.col-xs-12.col-md-4</div>
+    </div>
+    <h3>Collapse Helper</h3>
+    <p>Sometimes you want a grid layout without margins, each column pressed against each other without a gap. To accomplish this, simply use the collapse helper. It's as simple as creating a regular column for whatever size and adding collapse in the class.</p>
+    <div class='row collapseable'>
+      <div class='col-sm-collapse-3'>.col-sm-3</div>
+      <div class='col-sm-3'>.col-sm-3</div>
+      <div class='col-sm-collapse-3'>.col-sm-3</div>
+      <div class='col-sm-collapse-3'>.col-sm-3</div>
+    </div>
+    <div class='row collapseable'>
+      <div class='col-sm-collapse-6'>.col-sm-collapse-6</div>
+      <div class='col-sm-collapse-6'>.col-sm-collapse-6</div>
+    </div>
+    <p>
+      This simply takes advantage of Bourbon Neat's span-column mixin. Take a look at the
+      <a href="http://neat.bourbon.io/docs/#span-columns">Bourbon Neat docs</a>
+      for more details.
+    </p>
+    <h3>Offsetting Columns</h3>
+    <P>Move columns left and right with a variety of classes</P>
+    <div class='row'>
+      <div class='col-md-2'>.col-md-2</div>
+      <div class='col-md-8 col-md-offset-2'>.col-md-8.col-md-offset-2</div>
+    </div>
+    <div class='row'>
+      <div class='col-md-4'>.col-md-4</div>
+      <div class='col-md-4 col-md-offset-4'>.col-md-4.col-md-offset-4</div>
+    </div>
+    <h3>Column Ordering</h3>
+    <p>Similar to BS3, there is a built-in class for reodering columns.</p>
+    <div class='row'>
+      <div class='col-md-4 col-md-push-8'>.col-md-4 .col-md-push-8</div>
+      <div class='col-md-8 col-md-pull-4'>.col-md-8  .col-md-pull-4</div>
+    </div>
+    <div class='row'>
+      <div class='col-md-3 col-md-push-9'>(1) .col-md-3.col-md-push-9</div>
+      <div class='col-md-4 col-md-push-2'>(2) .col-md-4.col-md-push-2</div>
+      <div class='col-md-5 col-md-pull-7'>(3) .col-md-5.col-md-pull-7</div>
+    </div>
+    <h3>Nesting</h3>
+    <p>Nest as much as you'd like.</p>
+    <div class='row'>
+      <div class='col-sm-12'>
+        <span class='centered'>.col-sm-12</span>
+        <div class='row'>
+          <div class='col-sm-8 col-sm-offset-2'>
+            .col-sm-8.col-sm-offset-3
+            <div class='row'>
+              <div class='col-sm-4 padless'>
+                <span class='centered'>.col-sm-4 .padless</span>
+                <div class='row'>
+                  <div class='col-sm-6'>.col-sm-6</div>
+                  <div class='col-sm-6'>.col-sm-6</div>
+                </div>
+              </div>
+              <div class='col-sm-8 padless'>
+                <span class='centered'>.col-sm-8 .padless</span>
+                <div class='row'>
+                  <div class='col-sm-6'>.col-sm-6</div>
+                  <div class='col-sm-6'>.col-sm-6</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Notice the .padless class will allow you to remove the padding from a column or row</p>
+  </section>
+  <!-- %section.container -->
+  <!-- %h3 Container! -->
+  <!-- .alert.alert-error.alert-dismissable -->
+  <!-- %h4 Error -->
+  <!-- %p Shit is fucked up! -->
+  <!-- /%button{type: "button", class: "close", :"data-dismiss" => "alert", :"aria-hidden" => "true"} &times; -->
+  <!-- = link_to "&times;", "#", class: "close" -->
+  <!-- .alert.alert-success.alert-dismissable -->
+  <!-- %p -->
+  <!-- %strong Winrar! -->
+  <!-- You did it! Good job, buddy! -->
+  <!-- = link_to "&times;", "#", class: "close" -->
+  <!-- %section.container -->
+  <!-- .row -->
+  <!-- .col-sm-6 -->
+  <!-- .media -->
+  <!-- .pull-left -->
+  <!-- = image_tag "http://placehold.it/150x100", class: "media-object" -->
+  <!-- .media-body -->
+  <!-- %h4.media-heading This is a header -->
+  <!-- %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum arcu risus. -->
+  <!-- .row -->
+  <!-- .col-xs-12 -->
+  <!-- %h1 Hello, World! -->
+  <!-- %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum arcu risus, euismod at orci vitae, sagittis dapibus risus. Praesent pulvinar purus vitae elementum vulputate. Suspendisse at eros erat. Vivamus non fermentum metus. -->
+  <!-- %p Donec eu semper diam, ac faucibus tortor. Integer scelerisque pretium sapien at porta. Morbi rutrum sem in quam pellentesque sagittis. Quisque ac odio quis mi ornare dignissim ac et eros. Curabitur lacinia ullamcorper interdum. -->
+  <!-- %p Integer nec fermentum augue, et malesuada arcu. Nam convallis sed nunc a tempus. Donec ac nunc non elit pretium pulvinar. In ornare tempus dolor, non dapibus purus vehicula vel. Aliquam aliquet accumsan elit ut lobortis. Aliquam varius nisl eget magna mattis condimentum. Proin sit amet tempor turpis. -->
+  <!-- .row -->
+  <!-- .col-xs-12 -->
+  <!-- %h3 Navbar -->
+  <!-- %ul.nav -->
+  <!-- %li= link_to "Filter", "#" -->
+  <!-- %li= link_to "Nav", "#" -->
+  <!-- %li= link_to "Here", "#" -->
+  <!-- .row -->
+  <!-- %h3 Buttons -->
+  <!-- .actions -->
+  <!-- = link_to "Primary", "#", class: "btn btn-primary" -->
+  <!-- = link_to "Default", "#", class: "btn" -->
+  <!-- = link_to "Danger", "#", class: "btn btn-danger" -->
+  <!-- = link_to "Warning", "#", class: "btn btn-warning" -->
+  <!-- = link_to "Success", "#", class: "btn btn-success" -->
+  <!-- = link_to "Information", "#", class: "btn btn-info" -->
+  <!-- .actions -->
+  <!-- = link_to "Information", "#", class: "btn btn-sm" -->
+  <!-- = link_to "Primary", "#", class: "btn btn-primary btn-lg" -->
+  <!-- = link_to "Information", "#", class: "btn btn-xs" -->
+  <!-- .row -->
+  <!-- .col-lg-6.col-xs-3 -->
+  <!-- 6 -->
+  <!-- .col-lg-6.col-xs-9.omega -->
+  <!-- %div 6 -->
+  <!-- .col-sm-6.col-xs-12 -->
+  <!-- hello half -->
+  <!-- .col-sm-6.col-xs-12 -->
+  <!-- hello half -->
+  <!-- .row -->
+  <!-- .col-lg-6.col-xs-3.col-lg-push-6 -->
+  <!-- col-lg-push-6 -->
+  <!-- .col-lg-6.col-xs-9.omega.col-lg-pull-6 -->
+  <!-- col-lg-pull-6 -->
+  <!-- %section.container -->
+  <!-- .row.blargh -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+  <!-- .col-lg-3.col-md-4.col-sm-6.col-xs-12 hi -->
+</body>
