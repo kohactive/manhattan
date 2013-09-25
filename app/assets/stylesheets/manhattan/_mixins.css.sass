@@ -23,8 +23,8 @@
 
     // Create the collapse classes, i.e., .col-lg-collapse-2
     .col-#{$size}-collapse-#{$i}
-      @include span-columns($i, gutterless)
-      // @include span-columns-gutterless($i)
+      // @include span-columns($i, gutterless)
+      @include span-columns-gutterless($i)
 
 
     // Offsetting, i.e., .col-sm-offset-2
@@ -47,43 +47,20 @@
         @include omega(#{$i}n)
 
 
-
-// Patching Neat to allow for a gutterless display
-@mixin span-columns($span: $columns of $container-columns, $display: block) 
+// Thoughtbot doesn't want to add a gutterless display type for 
+// span columns so we'll use this mixin for now. This will create
+// equal column widths without any margin/gutters
+@mixin span-columns-gutterless($span: $columns of $container-columns) 
   $columns: nth($span, 1)
   $container-columns: container-span($span)
-
-  // Set nesting context (used by shift())
-  $parent-columns: get-parent-columns($container-columns)
 
   $direction: get-direction($layout-direction, $default-layout-direction)
   $opposite-direction: get-opposite-direction($direction)
 
-  $display-table: is-display-table($container-display-table, $display)
-
-  @if $display-table  
-    $padding: get-padding-for-table-layout($columns, $container-columns)
-    display: table-cell
-    padding-#$direction: $padding
-    width: flex-grid($columns, $container-columns) + $padding
-  @else 
-    display: block
-    float: #{$opposite-direction}
-
-    @if $display == collapse 
-      width: flex-grid($columns, $container-columns) + flex-gutter($container-columns)
-      narc: flex-gutter($container-columns)
-    
-    @else if $display == gutterless
-      width: percentage($columns / $container-columns)
+  display: block
+  float: #{$opposite-direction}
+  
+  width: percentage($columns / $container-columns)
      
-      &:last-child
-        width: percentage($columns / $container-columns)
-
-    @else 
-      margin-#{$direction}: flex-gutter($container-columns)
-      width: flex-grid($columns, $container-columns)
-
-      &:last-child 
-        margin-#{$direction}: 0
-      
+  &:last-child
+    width: percentage($columns / $container-columns)
