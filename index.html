@@ -2,26 +2,32 @@
 <head>
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
   <meta charset='utf-8'>
-  <link href='favicon.ico' rel='icon' type='image/x-icon'>
-  <link href='favicon.ico' rel='shortcut icon' type='image/x-icon'>
-  <link href='favicon.ico' rel='apple-touch-icon' type='image/x-icon'>
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'>
+  <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+  <link href='/favicon.ico' rel='apple-touch-icon' type='image/x-icon'>
   <title>Manhattan</title>
-  <link href="stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
-  <script src="javascripts/application.js" type="text/javascript"></script>
+  <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/application.js" type="text/javascript"></script>
+  <script src="//use.typekit.net/lfn5uzm.js" type="text/javascript"></script>
+  <script>
+    try{Typekit.load();}catch(e){}
+  </script>
 </head>
 <body>
   <header class='navbar'>
     <div class='container'>
       <div class='col'>
-        <ul class='nav'>
-          <li class='brand'><a href="#">Manhattan</a></li>
-        </ul>
+        <div class='brand'><a href="#">Manhattan</a></div>
+      </div>
+      <div class='col pull-right'>
+        <a class="btn btn-primary" href="https://github.com/johnkoht/manhattan">GITHUB</a>
       </div>
     </div>
   </header>
-  <section class='container'>
-    <h1>Manhattan</h1>
-    <p>A powerful, mobile-first responsive framework built on Bourbon Sass.</p>
+  <section class='hero'>
+    <div class='container'>
+      <h1>A powerful, mobile-first responsive framework built on Bourbon Neat.</h1>
+    </div>
   </section>
   <section class='container'>
     <h2>Grid System</h2>
@@ -86,13 +92,18 @@
     <p>Sometimes you want a grid layout without margins, each column pressed against each other without a gap. To accomplish this, simply use the collapse helper. It's as simple as creating a regular column for whatever size and adding collapse in the class.</p>
     <div class='row collapseable'>
       <div class='col-sm-collapse-3'>.col-sm-3</div>
-      <div class='col-sm-3'>.col-sm-3</div>
+      <div class='col-sm-collapse-3'>.col-sm-3</div>
       <div class='col-sm-collapse-3'>.col-sm-3</div>
       <div class='col-sm-collapse-3'>.col-sm-3</div>
     </div>
     <div class='row collapseable'>
       <div class='col-sm-collapse-6'>.col-sm-collapse-6</div>
       <div class='col-sm-collapse-6'>.col-sm-collapse-6</div>
+    </div>
+    <div class='row collapseable'>
+      <div class='col-sm-collapse-4'>.col-sm-collapse-4</div>
+      <div class='col-sm-collapse-4'>.col-sm-collapse-4</div>
+      <div class='col-sm-collapse-4'>.col-sm-collapse-4</div>
     </div>
     <p>
       This simply takes advantage of Bourbon Neat's span-column mixin. Take a look at the
