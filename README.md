@@ -1,4 +1,4 @@
-# [Manhattan](http://manhattan.kohsrv.net/)
+# [Manhattan](http://johnkoht.github.io/manhattan/)
 
 Manhattan is a powerful, mobile-first responsive framework built on top of Bourbon Neat. It's similar to Bootstrap 3 in syntax and usage but approachs the grid system differently.
 
