@@ -1,4 +1,5 @@
 require "bourbon"
+require "neat"
 require "manhattan/version"
 
 unless defined?(Sass)
