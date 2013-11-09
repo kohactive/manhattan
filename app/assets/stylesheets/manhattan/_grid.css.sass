@@ -80,40 +80,41 @@
   min-height: 1px
 
 
+@if $responsive == true
 
-// Extra small grid, i.e. phones
-// --------------------------------------
-@include grid-core(xs)
+  // Extra small grid, i.e. phones
+  // --------------------------------------
+  @include grid-core(xs)
 
-// Create the omega core for max-width
-@include media(max-width $screen-xs-max)
-  @include omega-core(xs)
-  
-
-
-// Small Grid for tablets and large phones
-// --------------------------------------
-@include media(min-width $screen-sm)
-  .container
-    max-width: $screen-sm
-  @include grid-core(sm)
-
-// Create the omega core
-@include media(min-width $screen-sm max-width $screen-sm-max)
-  @include omega-core(sm)
+  // Create the omega core for max-width
+  @include media(max-width $screen-xs-max)
+    @include omega-core(xs)
+    
 
 
+  // Small Grid for tablets and large phones
+  // --------------------------------------
+  @include media(min-width $screen-sm)
+    .container
+      max-width: $screen-sm
+    @include grid-core(sm)
 
-// Medium grid for smaller computers
-// --------------------------------------
-@include media(min-width $screen-md)
-  .container
-    max-width: $screen-md
-  @include grid-core(md)
+  // Create the omega core
+  @include media(min-width $screen-sm max-width $screen-sm-max)
+    @include omega-core(sm)
 
-// Create the omega core for the screen size
-@include media(min-width $screen-md max-width $screen-lg)
-  @include omega-core(md)
+
+
+  // Medium grid for smaller computers
+  // --------------------------------------
+  @include media(min-width $screen-md)
+    .container
+      max-width: $screen-md
+    @include grid-core(md)
+
+  // Create the omega core for the screen size
+  @include media(min-width $screen-md max-width $screen-lg)
+    @include omega-core(md)
 
 
 
