@@ -120,11 +120,21 @@
 
 // Large grid for large computers
 // --------------------------------------
-@include media(min-width $screen-lg)
+@if $response == true
+  @include media(min-width $screen-lg)
+    // Set .container to become an outer-container with a max-width
+    .container
+      @include outer-container
+  
+    // Create the grid
+    @include grid-core(lg)
+    // Create the omega core
+    @include omega-core(lg)
+@else
   // Set .container to become an outer-container with a max-width
   .container
     @include outer-container
-
+  
   // Create the grid
   @include grid-core(lg)
   // Create the omega core
