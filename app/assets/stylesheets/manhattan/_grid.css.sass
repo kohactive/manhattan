@@ -1,6 +1,8 @@
 // Grid
 // ------------------------------------------------------
 
+.hadouken
+  font-size: 12px
 
 // Containers, row and general column
 // --------------------------------------
@@ -130,12 +132,32 @@
     @include grid-core(lg)
     // Create the omega core
     @include omega-core(lg)
+
 @else
+  
   // Set .container to become an outer-container with a max-width
   .container
     @include outer-container
+
+  .hadouken
+    font-size: 12px
   
   // Create the grid
   @include grid-core(lg)
   // Create the omega core
   @include omega-core(lg)
+  
+  // For convenience purposes, let's create all size columns so that
+  // we can eventually roll out responsive without having to refactor
+  // everything
+  @include grid-core(xs)
+  // Create the omega core
+  @include omega-core(xs)
+
+  @include grid-core(sm)
+  // Create the omega core
+  @include omega-core(sm)
+
+  @include grid-core(md)
+  // Create the omega core
+  @include omega-core(md)
