@@ -42,8 +42,8 @@
 @mixin omega-core($size)
   @for $i from 1 through $grid-columns
     .omega-#{$size}-#{$i}
-      [class^="col-"],
-      [class*=" col-"]
+      > [class^="col-"],
+      > [class*=" col-"]
         @include omega(#{$i}n)
 
 
