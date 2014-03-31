@@ -7,9 +7,6 @@
 @mixin grid-core($size)
   @for $i from 1 through $grid-columns
     .col-#{$size}-#{$i}
-      // Ignore float for the largest grid size
-      @if $i < $grid-columns
-        float: left
       @include span-columns($i)
 
     
