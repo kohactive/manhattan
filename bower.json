@@ -1,0 +1,20 @@
+{
+  "name": "manhattan",
+  "version": "0.3.0",
+  "homepage": "https://github.com/kohactive/manhattan",
+  "authors": [
+    "Lawrence Davis <lawrence@kohactive.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bourbon": "~4.1.1",
+    "neat": "~1.7.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
