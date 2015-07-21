@@ -11,15 +11,11 @@ TODO: Write usage instructions here
 
 Add this line to your application's Gemfile:
 
-    gem 'manhattan'
+    gem 'manhattan', github: 'kohactive/manhattan'
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install manhattan
 
 ## Contributing
 
