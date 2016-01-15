@@ -11,7 +11,7 @@ TODO: Write usage instructions here
 
 Add this line to your application's Gemfile:
 
-    gem 'manhattan', github: 'kohactive/manhattan'
+    gem 'manhattan-sass'
 
 And then execute:
 
