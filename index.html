@@ -61,6 +61,7 @@
         <div class='col-md-6'>.col-md-6</div>
         <div class='col-md-6'>.col-md-6</div>
       </div>
+
       <h3>Omega Helper</h3>
       <p>
         Responsive omega helpers allow you to dynamically shift the omega of the grid based on screen size. Omega is the removal of the column margin, learn more on the
@@ -107,6 +108,12 @@
         <a href="http://neat.bourbon.io/docs/#span-columns">Bourbon Neat docs</a>
         for more details.
       </p>
+
+      <h3>Centering</h3>
+      <div class='row'>
+        <div class='col-md-6 col-md-centered'>.col-md-6.col-md-centered</div>
+      </div>
+
       <h3>Offsetting Columns</h3>
       <P>Move columns left and right with a variety of classes</P>
       <div class='row'>
@@ -157,6 +164,33 @@
         </div>
       </div>
       <p>Notice the .padless class will allow you to remove the padding from a column or row</p>
+
+      <h3>Responsive Mixins</h3>
+      <p>Easy-to-use mixins for making responsive customizations</p>
+      <pre>
+        <code>
+          +media-xs
+            // css for > xs breakpoint only
+
+          +media-sm
+            // css for < sm breakpoint
+
+          +media-xs-sm
+            // css for > md breakpoint
+
+          +media-sm-only
+            // css for > sm, < md
+
+          +media-sm-md-only
+            // css for > sm, < lg
+            
+          +media-md
+            // css for < md
+            
+          +media-lg
+            // css for < lg
+        </code>
+      </pre>
     </section>
   </body>
 </html>
