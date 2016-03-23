@@ -1,6 +1,6 @@
 # [Manhattan](http://kohactive.github.io/manhattan/)
 
-Manhattan is a powerful, mobile-first responsive framework built on top of Bourbon Neat. It's similar to Bootstrap 3 in syntax and usage but approachs the grid system differently.
+Manhattan is a powerful, mobile-first responsive framework built on top of Bourbon Neat. It's similar to Bootstrap 3 in syntax and usage but approaches the grid system differently.
 
 ## Usage
 
