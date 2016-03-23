@@ -5,6 +5,7 @@
     "kohactive <info@kohactive.com>"
   ],
   "description": "A powerful, mobile-first responsive framework built on Bourbon Neat.",
+  "version": "0.4.4",
   "main": "",
   "moduleType": [],
   "keywords": [
@@ -17,6 +18,14 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
-  ]
+    "tests",
+    "lib",
+    "Gemfile",
+    "manhattan.gemspec",
+    "Rakefile"
+  ],
+  "dependencies": {
+    "bourbon": "~> 4.2",
+    "neat": "^1.7.4"
+  }
 }
