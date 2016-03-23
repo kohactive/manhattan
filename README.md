@@ -18,8 +18,20 @@ And then execute:
 
     $ bundle
 
+Import Sass:
+
+    @import bourbon
+    @import neat
+    @import manhattan
+
 ### Bower
     bower install manhattan
+
+Import Sass:
+
+    @import bower_components/bourbon/app/assets/stylesheets/bourbon
+    @import bower_components/neat/app/assets/stylesheets/neat
+    @import bower_components/manhattan/app/assets/stylesheets/manhattan
 
 ## Contributing
 
