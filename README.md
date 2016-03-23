@@ -9,6 +9,7 @@ TODO: Write usage instructions here
 
 ## Installation
 
+### Ruby
 Add this line to your application's Gemfile:
 
     gem 'manhattan-sass'
@@ -16,6 +17,9 @@ Add this line to your application's Gemfile:
 And then execute:
 
     $ bundle
+
+### Bower
+    bower install manhattan
 
 ## Contributing
 

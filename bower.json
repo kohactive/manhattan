@@ -1,0 +1,22 @@
+{
+  "name": "manhattan",
+  "homepage": "http://kohactive.github.io/manhattan/",
+  "authors": [
+    "kohactive <info@kohactive.com>"
+  ],
+  "description": "A powerful, mobile-first responsive framework built on Bourbon Neat.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "grid",
+    "responsive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
