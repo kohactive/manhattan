@@ -4,7 +4,7 @@
 // Create the grid for a given size
 // This will loop over the number of columns and create a css class
 // for each. If it's the last gride size, then let's not add a float
-@mixin grid-core($size)
+=grid-core($size)
   @for $i from 1 through $grid-columns
     .col-#{$size}-#{$i}
       @include span-columns($i)
@@ -36,7 +36,7 @@
 
 
 // Omega Core builder
-@mixin omega-core($size)
+=omega-core($size)
   @for $i from 1 through $grid-columns
     .omega-#{$size}-#{$i}
       > [class^="col-"],
@@ -47,7 +47,7 @@
 // Thoughtbot doesn't want to add a gutterless display type for 
 // span columns so we'll use this mixin for now. This will create
 // equal column widths without any margin/gutters
-@mixin span-columns-gutterless($span: $columns of $container-columns) 
+=span-columns-gutterless($span: $columns of $container-columns) 
   $columns: nth($span, 1)
   $container-columns: container-span($span)
 
@@ -61,3 +61,33 @@
      
   &:last-child
     width: percentage($columns / $container-columns)
+
+
+// Responsive mixins
+=media-xs
+  @media screen and (max-width: $screen-sm - 1)
+    @content
+
+=media-sm
+  @media screen and (min-width: $screen-sm)
+    @content
+
+=media-xs-sm
+  +media(max-width $screen-md - 1)
+    @content
+
+=media-sm-only
+  +media(min-width $screen-sm max-width $screen-md - 1)
+    @content
+
+=media-sm-md-only
+  +media(min-width $screen-sm max-width $screen-lg - 1)
+    @content
+
+=media-md
+  @media screen and (min-width: $screen-md)
+    @content
+
+=media-lg
+  @media screen and (min-width: $screen-lg)
+    @content
