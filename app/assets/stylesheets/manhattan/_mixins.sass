@@ -43,6 +43,9 @@
       > [class*=" col-"]
         @include omega("#{$i}n")
 
+        &:nth-child(#{$i}n+1)
+          clear: left
+
 
 // Thoughtbot doesn't want to add a gutterless display type for 
 // span columns so we'll use this mixin for now. This will create
