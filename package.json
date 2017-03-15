@@ -1,0 +1,23 @@
+{
+  "name": "manhattan-sass",
+  "version": "0.6.1",
+  "description": "Manhattan is a powerful, mobile-first responsive framework built on top of Bourbon Neat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kohactive/manhattan.git"
+  },
+  "author": "kohactive",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kohactive/manhattan/issues"
+  },
+  "homepage": "https://github.com/kohactive/manhattan#readme",
+  "dependencies": {
+    "bourbon": "~> 4.2",
+    "bourbon-neat": "^1.7.4"
+  }
+}

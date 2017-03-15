@@ -33,6 +33,15 @@ Import Sass:
     @import bower_components/neat/app/assets/stylesheets/neat
     @import bower_components/manhattan/app/assets/stylesheets/manhattan
 
+### NPM
+    npm install manhattan-sass --save-dev
+
+Import Sass:
+
+    @import node_modules/bourbon/app/assets/stylesheets/bourbon
+    @import node_modules/bourbon-neat/app/assets/stylesheets/neat
+    @import node_modules/manhattan-sass/app/assets/stylesheets/manhattan
+
 ## Contributing
 
 1. Fork it
